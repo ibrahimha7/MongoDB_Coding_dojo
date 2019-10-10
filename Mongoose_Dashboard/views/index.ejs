@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Mongoose Dashboard</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+</head>
+
+<body>
+    <div class="container">
+       <h1>This is a list of all Mongooses</h1>
+       
+       <hr>
+
+       <table class="table">
+        <thead class="thead-dark">
+          <tr>
+            
+            <th scope="col">Animal Name</th>
+            <th scope="col">Animal Color</th>
+            <th scope="col">View</th>
+            <th scope="col">Delete</th>
+          </tr>
+        </thead>
+        <tbody>
+            <% for (var x in arr) { %>
+          <tr>
+            
+            <td>"<%=arr[x].name%></td>
+            <td>"<%=arr[x].color%></td>
+            <td><a href="/info/<%=arr[x]._id%>">Check it</a></td>
+            <td>
+            <form action="/delete/<%=arr[x]._id%>" method="post">
+                <button class="btn btn-danger">Delete</button>
+            </form>
+        </td>
+          </tr>        
+          <% } %>
+        </tbody>
+      </table>
+      
+      <button class="btn btn-primary">Add New Animal</button>
+      
+
+    </div>
+</body>
+
+</html>

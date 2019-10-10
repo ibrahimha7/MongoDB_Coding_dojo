@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Mongoose Dashboard</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+</head>
+
+<body>
+    <div class="container">
+       
+       
+        <h1>Information about "<%=mongo.name%>"</h1>
+        <p>-Their color is "<%=mongo.color%>"</p>
+        <p>-Their ID number is "<%=mongo._id%>"</p>
+        <p>-Created at "<%=mongo.createdAt%>"</p>
+        <p>-Updated at "<%=mongo.updatedAt%>"</p>
+        <a href="/edit/<%=mongo._id%>">Edit this animal?</a>
+        <br>
+      
+
+    </div>
+</body>
+
+</html>
