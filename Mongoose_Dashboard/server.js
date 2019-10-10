@@ -6,8 +6,6 @@ var mongoose = require("mongoose");
 
 mongoose.connect("mongodb://localhost/quoting", { useNewUrlParser: true,useUnifiedTopology: true });
 
-// Use native promises
-//mongoose.Promise = global.Promise;
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.set("view engine", "ejs");
